@@ -1,0 +1,47 @@
+<h1><%= @gym[:name] %> </h1>
+
+<form action="/gyms/<%= @gym[:id] %>/review/create">
+  <div class="form-group">
+    <label>Your name</label>
+    <input type="text" class="form-control" name="name">
+  </div>
+  <div class="form-group">
+    <label>Email address</label>
+    <input type="email" class="form-control" placeholder="name@example.com" name="email">
+  </div>
+ <div class="form-group">
+    <label for="exampleFormControlSelect1">Overall Rating</label>
+    <select class="form-control" id="exampleFormControlSelect1" name="Overall_Rating">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+    <div class="form-group">
+    <label for="exampleFormControlSelect1">Equipment Rating</label>
+    <select class="form-control" id="exampleFormControlSelect1" name="Equipment_Rating">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+    <div class="form-group">
+    <label for="exampleFormControlSelect1">Trainers Rating</label>
+    <select class="form-control" id="exampleFormControlSelect1" name="Trainers_Rating">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label>Comments</label>
+    <textarea class="form-control" rows="3" name="comments"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
