@@ -8,7 +8,7 @@ DB = Sequel.connect(connection_string)                                          
 # Database schema - this should reflect your domain model
 DB.create_table! :gyms do
   primary_key :id
-  String :name
+  String :Name
   Float  :avg_rating
   String :description, text: true
   String :location
@@ -38,13 +38,13 @@ end
 gyms_table = DB.from(:gyms)
 reviews_table = DB.from(:reviews)
 
-gyms_table.insert(Name: "London Gold Gym", 
+gyms_table.insert(  Name: "London Gold Gym", 
                     description: "The famous mecca of bodybuilding in London!",
                     avg_rating: 0.0,
                     location: "Baker Street",
                     contact: "+447425184467")
 
-gyms_table.insert(Name: "Fitness First", 
+gyms_table.insert(  Name: "Fitness First", 
                     description: "21 Outles all across London  ",
                     avg_rating: 0.0,
                     location: "Bond Street",
