@@ -1,0 +1,48 @@
+<h1><%= @gym[:name] %> </h1>
+
+    <b1>
+    <table style="width:100%">
+    <tr>
+        <th><%= @gym[:location] %></th>
+    </tr>
+    <tr>
+        <td>
+            <a href="/gyms/<%= @gym[:id] %>/reviews/new" class = "btn btn-primary"> Leave A Review</a>
+        <td>
+        <td>
+            <a href="/gyms/<%= @gym[:id] %>/gyms/contact" class = "btn btn-primary"> Book a Trial</a>
+        <td>
+    </tr>
+    
+    </table>
+    </b1>
+
+    <hr>
+    
+<% for reviews in @reviews %>
+
+    <b1>
+    <table style="width:100%">
+    <tr>
+    <td>
+        <b1>Overall Rating: <%= reviews[:overall_rating] %></b1>
+        <b1>&nbsp&nbsp&nbsp&nbsp</b1>
+        <b1>Equipment Rating: <%= reviews[:equipment_rating] %></b1>
+        <b1>&nbsp&nbsp&nbsp&nbsp</b1>
+        <b1>Trainers Rating: <%= reviews[:trainers_rating] %></b1>
+    </td>
+    </tr>
+    <tr>
+        <b>User Name: <%= reviews[:name] %></b>
+    </tr>
+    <tr>
+    <td>
+        <b1>Comments: <%= reviews[:comments] %></b1>
+    </td>
+    </tr>
+ 
+    </table>
+    </b1>
+    <hr>
+
+<% end %>

@@ -1,0 +1,10 @@
+<h1>Master list of Gyms</h1>
+
+<% for gyms in @gyms %>
+
+<p>
+<a href = "/gyms/<%= gyms[:id] %>"><%= gyms[:name] %></a>
+<b1>&nbsp&nbsp&nbsp&nbsp</b1>
+</p>
+
+<% end %>
